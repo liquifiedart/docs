@@ -1,0 +1,96 @@
+
+***grep "text" global regular express pattern matching
+
+service --statusall
+service <name> start/stop
+
+ls; Lists files and folders in a directory
+ls -a; Lists all files and folders in a directory, including hidden files.
+ls -l; long output format showing modification dates and owners.
+
+sudo
+
+About sudo ("superuser do", or "switch user do") allows a user with proper permissions to execute a command as another user, such as the superuser.
+sudo allows a permitted user to execute a command as another user, according to specifications in the /etc/sudoers file.
+
+
+apt-get
+About apt-get. apt-get is the command-line tool for working with APT software packages. APT (the Advanced Packaging Tool) is an evolution of the Debian .deb software packaging system. It is a rapid, practical, and efficient way to install packages on your system.
+
+rm; Removes files and folders
+
+ip addr; Shows local(private) ipaddress
+
+curl ifconfig.me; Shows public IP Address
+
+
+pwd
+Prints out the full pathname of the current working directory to standard output
+
+man 
+man program will show you the on-line documentation (the man page) for
+a program (e.g., try man man or man ls). Handy if you want to know what
+a program does. On Linux machines like the ones in the Zoo you can also
+get information using info program
+
+mkdir dir; will create a new directory in the current directory named dir.
+rmdir dir; deletes a directory. It only works on directories that contain
+no files.
+
+cd; changes the current working directory. With no arguments, cd changes back to your home directory.
+
+mv; mv old-name new-name, changes the name of a file. You can also use this to move files between directories.
+
+cp; cp old-name new-name, makes a copy of a file.
+
+chmod; chmod changes the permissions on a file or directory. See the man page for the full details of how this works. Here are some common chmod’s:
+• chmod 644 file; owner can read or write the file, others can only read it.
+• chmod 600 file; owner can read or write the file, others can’t do anything with it.
+• chmod 755 file; owner can read, write, or execute the file, others can read or execute it. This is typically used for programs or for directories (where the execute bit has the special meaning of letting somebody find files in the directory).
+• chmod 700 file; owner can read, write, or execute the file, others can’t do anything with it.
+
+
+There are various control-key combinations you can type at a terminal window
+to interrupt or stop a running program.
+
+ctrl-C 
+Interrupt the process. Many processes (including any program you write
+unless you trap SIGINT using the sigaction system call) will die instantly
+when you do this. Some won’t.
+
+ctrl-Z 
+Suspend the process. This will leave a stopped process lying around.
+Type jobs to list all your stopped processes, fg to restart the last process
+(or fg %1 to start process %1 etc.), bg to keep running the stopped process
+in the background, kill %1 to kill process %1 politely, kill -KILL %1 to
+kill process %1 whether it wants to die or not.
+
+ctrl-D 
+Send end-of-file to the process. Useful if you are typing test input
+to a process that expects to get EOF eventually or writing programs
+using cat > program.c (not really recommmended). For test input,
+you are often better putting it into a file and using input redirection
+(./program < test-input-file); this way you can redo the test after
+you fix the bugs it reveals.
+
+ctrl-\ 
+Quit the process. Sends a SIGQUIT, which asks a process to quit and
+dump core. Mostly useful if ctrl-C and ctrl-Z don’t work.
+
+If you have a runaway process that you can’t get rid of otherwise, you can use
+
+ps g 
+to get a list of all your processes and their process ids. The kill command
+30can then be used on the offending process, e.g. 
+
+kill -KILL 6666 
+if your evil process has process id 6666. Sometimes the killall command can simplify
+this procedure, e.g. killall -KILL evil kills all process with command name
+evil.
+
+
+Piping example:
+$ ./do-many-experiments | sort | uniq -c | sort -nr
+which, if ./do-many-experiments gives the output of one experiment on each
+line, produces a list of distinct experimental outputs sorted by decreasing fre-
+quency. Pipes like this can often substitute for hours of real programming.

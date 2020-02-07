@@ -1,0 +1,5 @@
+#Useful Linux Shortcuts
+Alt-F2 		- Open a Run command ex:(firefox, gnome-terminal)
+Window+A 	- Show all Applications
+Window 		- Open system overview (can type to search for application)
+Ctrl+Alt UP/DN 	- Move through virtual desktops

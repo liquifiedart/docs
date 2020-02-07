@@ -1,0 +1,68 @@
+-i/insert, insert mode
+esc, command mode
+:w - write file
+:w! - overwrite file
+:q - quit
+
+:h Get help. (Hit Enter at the end of any command that starts with a colon.)
+Escape
+Get out of whatever strange mode you are in and go back to normal mode.
+You will need to use this whenever you are done typing code and want to
+get back to typing commands.
+
+i Enter insert mode. You will need to do this to type anything. The command a
+also enters insert mode, but puts new text after the current cursor position
+instead of before it. 
+
+u
+Undo. Undoes the last change you made to the current buffer. Type it
+again to undo more things. If you undid something by mistake, c-R (control
+R) will redo the last undo(and can also be repeated). 
+
+:w
+Write the current file to disk. Use :w filename to write it to filename.
+Use :wa to write all files that you have modified. The command ZZ does the same thing without having to hit Enter at the end. 
+
+:e filename
+Edit a different file.
+
+:q Quit. Vi will refuse to do this if you have unwritten files. See :wa for how
+to fix this, or use :q! if you want to throw away your changes and quit
+anyway. The shortcuts :x and :wq do a write of the current file followed
+by quitting.
+h, j, k, l Move the cursor left, down, up, or right. You can also use the arrow
+keys (in both normal mode and insert mode).
+
+x Delete the current character.
+
+D Delete to end of line.
+
+dd Delete all of the current line. This is a special case of a more general d
+command. If you precede it with a number, you can delete multiple lines:
+
+5dd deletes the next 5 lines. If you replace the second d with a motion
+command, you delete until wherever you land: d$ deletes to end of line
+(D is faster), dj deletes this line and the line after it, d% deletes the next
+matching group of parantheses/braces/brackets and whatever is between
+34them, dG deletes to end of file—there are many possibilities. All of these
+save what you deleted into register "" so you can get them back with p.
+yy Like dd, but only saves the line to register "" and doesn’t delete it. (Think
+copy). All the variants of dd work with yy: 5yy, y$, yj, y%, etc.
+p Pull whatever is in register "". (Think paste).
+<< and >> Outdent or indent the current line one tab stop.
+
+:make Run make in the current directory. You can also give it arguments, e.g.,
+
+:make myprog, :make test. Use :cn to go to the next error if you get errors.
+
+:! Run a command, e.g., :! echo hello world or :! gdb myprogram. Returns
+to Vim when the command exits (control-C can sometimes be helpful if
+your command isn’t exiting when it should). This works best if you ran
+Vim from a shell window; it doesn’t work very well if Vim is running in its
+own window.
+
+v Visal Mode
+
+y Yank (copy) selected text
+
+p Past text

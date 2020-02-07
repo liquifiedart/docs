@@ -1,0 +1,33 @@
+Pointer arithmetic with differnt types (++ adds size of type)
+	- Cast to uint8_t to add bytes
+
+Global memory is initialized to 0
+	- Stack & Heap is not
+
+Make hash tables power of 2 num buckets
+	- allows you to do a power of 2 - 1, intead of % operation in hash func
+	- Work into conversation about hash tables
+
+Test odd/even is just var &1
+Toggle bool var ^=1
+
+!!var sets any int to 1 or 0, depending if it was on or not.
+
+Mem alignment
+
+Don't mix malloc with delete or new with free
+
+Talk about threading if it comes up
+
+Smart Ptrs
+	- manage heap memory
+
+Convert from base 10/16 to base 9
+	- write a function to do it
+
+DONE* Finding intersection between 2 lists
+	- 2 lists contain partially the same data set
+
+DONE* Concept of shared Memory
+
+

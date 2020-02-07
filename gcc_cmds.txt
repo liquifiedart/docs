@@ -1,0 +1,4 @@
+-lm Required for linking libraries
+-g3 debugging symbols
+-o output file
+-c option to gcc to tell it just to create an object file 

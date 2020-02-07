@@ -1,0 +1,18 @@
+First, update the package index.
+	sudo apt-get update
+
+Next, install Java. Specifically, this command will install the Java Runtime Environment (JRE).
+
+	sudo apt-get install default-jre
+
+There is another default Java installation called the JDK (Java Development Kit). The JDK is usually only needed if you are going to compile Java programs or if the software that will use Java specifically requires it.
+
+The JDK does contain the JRE, so there are no disadvantages if you install the JDK instead of the JRE, except for the larger file size.
+
+You can install the JDK with the following command:
+
+    sudo apt-get install default-jdk
+
+
+https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-ubuntu-16-04
+

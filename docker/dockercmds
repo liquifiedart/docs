@@ -1,0 +1,58 @@
+## List Docker CLI commands
+docker
+docker container --help
+
+## Display Docker version and info
+docker --version
+docker version
+docker info
+
+## Execute Docker image
+docker run hello-world
+
+## List Docker images
+docker image ls
+
+## List Docker containers (running, all, all in quiet mode)
+docker container ls
+docker container ls --all
+docker container ls -aq
+
+
+#########################
+Build must be done with root privs on directory and associated files
+
+(Notice Gary-wzl77: owns the files/folders)
+gary-wzl77@localhost:~/test1$ ls -al
+total 12
+drwxrwxr-x  2 gary-wzl77 gary-wzl77 4096 Jun  6 18:14 .
+drwxr-xr-x 15 gary-wzl77 gary-wzl77 4096 Jun  6 18:14 ..
+-rw-rw-r--  1 gary-wzl77 gary-wzl77   35 Jun  6 18:14 Dockerfile
+
+gary-wzl77@localhost:~/test1$ sudo chown root.root -R ../test1
+
+(Notice root: owns the files/folders)
+gary-wzl77@localhost:~/test1$ ls -al
+total 12
+drwxrwxr-x  2 root       root       4096 Jun  6 18:14 .
+drwxr-xr-x 15 gary-wzl77 gary-wzl77 4096 Jun  6 18:14 ..
+-rw-rw-r--  1 root       root         35 Jun  6 18:14 Dockerfile
+
+##########################
+(For Docker Pushing)
+You need to include the namespace for Docker Hub to associate it with your account.
+The namespace is the same as your Docker Hub account name.
+You need to rename the image to YOUR_DOCKERHUB_NAME/docker-whale.
+
+So, this means you have to tag your image before pushing:
+
+docker tag firstimage YOUR_DOCKERHUB_NAME/firstimage
+
+and then you should be able to push it.
+
+docker push YOUR_DOCKERHUB_NAME/firstimage
+
+Update: see also the answer from provided by Dean Wu. Before pushing, remember to log in from the command line to your docker hub account
+
+docker login
+

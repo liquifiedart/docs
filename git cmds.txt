@@ -1,0 +1,8 @@
+#Useful Linux Shortcuts
+Remote Names - WebEdu, LHCWeb
+
+git init - initialize a git repo
+git remote add (name) (url)
+git add .
+git commit -m "message"
+git push
