@@ -1,5 +1,6 @@
-#Useful Linux Shortcuts
-Remote Names - WebEdu, LHCWeb
+Remote Names: webedu, pythonedu, docs, lhcweb
+
+#Useful git commands
 
 git init - initialize a git repo
 git remote add (name) (url)
