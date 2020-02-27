@@ -12,10 +12,17 @@ sudo allows a permitted user to execute a command as another user, according to 
 
 
 ps; Process Status Command
-ps -e; All processes
+ps -a; All processes
+ps -l; Long Format
+ps -al | sort -n -k10; (sort by numeric and use the 10th column (memory))
 
 service --statusall
 service <name> start/stop
+
+
+more [filename]; is used to view the text files in the command prompt, displaying one screen at a time in case the file is large
+
+
 
 apt-get
 About apt-get. apt-get is the command-line tool for working with APT software packages. APT (the Advanced Packaging Tool) is an evolution of the Debian .deb software packaging system. It is a rapid, practical, and efficient way to install packages on your system.
