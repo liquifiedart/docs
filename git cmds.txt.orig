@@ -16,7 +16,7 @@ git push -u (name) (branch)
 
 git remote -v : See the name of Remotes
 =======
-
+git push
 
 
 # list all branches (local and remote)
