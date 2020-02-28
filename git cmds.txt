@@ -1,24 +1,12 @@
-<<<<<<< HEAD
-#Useful Linux Shortcuts
-Remote Names: lhcweb, docs, webedu, pythonedu
-=======
 Remote Names: webedu, pythonedu, docs, lhcweb
 
 #Useful git commands
->>>>>>> 946e14a3d4f1b270a152a63c27458ecfec2db8a3
 
 git init : initialize a git repo
 git remote add (name) (url)
 git add .
 git commit -m "message"
-<<<<<<< HEAD
 git push -u (name) (branch)
-
 git remote -v : See the name of Remotes
-=======
+git branch -a : list all branches (local and remote)
 
-
-
-# list all branches (local and remote)
-git branch -a
->>>>>>> 946e14a3d4f1b270a152a63c27458ecfec2db8a3
