@@ -18,6 +18,8 @@ u
 Undo. Undoes the last change you made to the current buffer. Type it
 again to undo more things. If you undid something by mistake, c-R (control
 R) will redo the last undo(and can also be repeated). 
+*vim* 
+A text editor that is upwards compatible to Vi. There are a lot of enhancements above Vi: multi level undo, multiple windows and buffers, syntax highlighting, command line editing, file name completion, a complete help system, visual selection, and others.
 
 :w
 Write the current file to disk. Use :w filename to write it to filename.
