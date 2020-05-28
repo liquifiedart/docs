@@ -1,31 +1,23 @@
 Remote Names: webedu, pythonedu, docs, lhcweb
 
-#Useful git commands
-
-<<<<<<< HEAD
-git init - initialize a git repo
-git remote add <name> <url>
-git add .
-git commit -m "message"
-git push <remote> <branch>
-
-
-# list all branches (local and remote)
-git branch -a
+# init empty repo
+git init
 
 # clone existing repo
 git clone <git repo url>
 
-
-# get latest code
-git pull <remote name> <branch>
-=======
-git init : initialize a git repo
-git remote add (name) (url)
+#Useful git commands
+git remote add <name> <url>
 git add .
 git commit -m "message"
-git push -u (name) (branch)
+git push <remote> <branch> (-u upstream option)
 git remote -v : See the name of Remotes
 git branch -a : list all branches (local and remote)
 
->>>>>>> c79edeab6a7a9329f82892e726562149fcd71ff3
+# Branching
+git branch <newBranchName> <fromBranch>
+git checkout <branchname> : check's out the branch for work
+git checkout -b <newBranchname> : create's a new branch check's it out for work
+
+# get latest code
+git pull <remote name> <branch>
