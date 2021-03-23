@@ -1,0 +1,104 @@
+############
+NodeJS
+############
+REF: https://phoenixnap.com/kb/install-latest-node-js-and-nmp-on-ubuntu
+
+Install nvm Node version manager
+Install npm Node package manager
+
+Install NodeJs 
+	# nvm install node
+	or
+	# nvm install -lts
+	or
+	# nvm install 
+
+	
+############
+NPM (Node package manager)
+############
+
+npm install -g npm	# Updates package manager
+npm install		# Install dependencies
+npm run <value>	# <value> derives from the local package.json under scripts:
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+
+############
+Node Version Manager
+############
+
+nvm list 		# List Node.js Versions
+nvm use <version> 	# Use a Node.js Version
+nvm version 		# Node.js Version
+nvm v			# Node Version Manager Version
+nvm --version 		# Version of NVM
+
+
+############
+ExpressJS
+############
+
+#Installing
+Assuming you’ve already installed Node.js, create a directory to hold your application, and make that your working directory.
+
+$ mkdir myapp
+$ cd myapp
+
+Use the npm init command to create a package.json file for your application. For more information on how package.json works, see Specifics of npm’s package.json handling.
+
+$ npm init
+
+This command prompts you for a number of things, such as the name and version of your application. For now, you can simply hit RETURN to accept the defaults for most of them, with the following exception:
+
+entry point: (index.js)
+
+Enter app.js, or whatever you want the name of the main file to be. If you want it to be index.js, hit RETURN to accept the suggested default file name.
+
+Now install Express in the myapp directory and save it in the dependencies list. For example:
+
+$ npm install express --save
+
+To install Express temporarily and not add it to the dependencies list:
+
+$ npm install express --no-save
+
+
+#Setup 'index.js'
+REF: https://howtonode.org/getting-started-with-express
+
+
+############
+Express Generator
+############
+sudo npm install express-generator -g
+
+
+############
+NodeJS View Engines
+############
+
+The most basic definition is that the view engine is a tool that helps us write HTML code and reuse it in a shorter and simpler way than usual. In addition, it can import data from the server side and render the final HTML. Some common view engines in Node.js projects are as follows:
+
+- EJS (Embedded javascript templating)
+- Pug (Formerly Jade)
+- Handlebars
+- Haml.js
+- Nunjucks
+
+
+############
+NodeJS MSSQL
+############
+package.json: Add the below dependencies for MSSQL support
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "mssql": "^6.0.1" ,
+    "express": "^4.17.1",  
+  }
+  
+
+
+

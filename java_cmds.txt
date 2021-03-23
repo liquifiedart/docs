@@ -1,0 +1,3 @@
+$ echo $JAVA_HOME
+$ echo $PATH
+$ which java		// find out th epath to which java exe under linux
