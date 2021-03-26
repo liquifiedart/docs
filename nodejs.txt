@@ -39,6 +39,7 @@ nvm --version 		# Version of NVM
 ############
 ExpressJS
 ############
+REF: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 
 #Installing
 Assuming you’ve already installed Node.js, create a directory to hold your application, and make that your working directory.
@@ -72,6 +73,8 @@ REF: https://howtonode.org/getting-started-with-express
 ############
 Express Generator
 ############
+Generates a skeleton website
+
 sudo npm install express-generator -g
 
 
